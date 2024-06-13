@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-palette: --nablaPalette;
+}
+
+@font-palette-values --nablaPalette {
+  font-family: "Nabla";
+  base-palette: 4;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+body {
+  background-color: black;
+}
+
+.contain {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .card-wrapper {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.wrapper .card-wrapper input {
+  display: none;
+}
+
+.cards {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.cards label {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Forces hardware acceleration */
+  will-change: transform;
+  transform-origin: center bottom;
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: large;
+}
+
+.cards label:hover {
+  scale: 1.05;
+}
+
+#c1:checked ~ .cards {
+  .card1 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card2 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card3 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card4 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card5 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card6 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card7 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c2:checked ~ .cards {
+  .card2 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card3 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card4 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card5 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card6 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card7 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card1 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c3:checked ~ .cards {
+  .card3 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card4 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card5 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card6 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card7 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card1 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card2 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c4:checked ~ .cards {
+  .card4 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card5 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card6 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card7 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card1 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card2 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card3 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c5:checked ~ .cards {
+  .card5 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card6 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card7 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card1 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card2 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card3 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card4 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c6:checked ~ .cards {
+  .card6 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card7 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card1 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card2 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card3 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card4 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card5 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+#c7:checked ~ .cards {
+  .card7 {
+    transform: translate3d(0, 0, 0);
+  }
+  .card1 {
+    transform: translate3d(200px, 0, -100px);
+    rotate: 2deg;
+  }
+  .card2 {
+    transform: translate3d(400px, 0, -200px);
+    rotate: 4deg;
+  }
+  .card3 {
+    transform: translate3d(600px, 0, -300px);
+    rotate: 6deg;
+  }
+  .card4 {
+    transform: translate3d(-600px, 0, -300px);
+    rotate: -6deg;
+  }
+  .card5 {
+    transform: translate3d(-400px, 0, -200px);
+    rotate: -4deg;
+  }
+  .card6 {
+    transform: translate3d(-200px, 0, -100px);
+    rotate: -2deg;
+  }
+}
+
+.toggle {
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  border-radius: 200px;
+  background-color: rgb(107, 114, 128);
+  position: relative;
+}
+
+.toggle::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-color: rgb(34, 197, 94);
+  position: absolute;
+  border-radius: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 200ms;
+}
+
+#toggle:checked + .toggle {
+  background-color: rgb(168, 85, 247);
+}
+
+#toggle:checked + .toggle::before {
+  transform: translateX(50px);
+}
+
+#toggle {
+  display: none;
+}
+
+/* .scroller:has(.scroller_inner) {
+  -webkit-mask: linear-gradient(transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(transparent, white 20%, white 80%, transparent);
+}
+
+.scroller_inner {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  animation: scroll 10s forwards linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(0, calc(-50% - 0.5rem));
+  }
+} */
