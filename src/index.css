@@ -11,6 +11,15 @@
   base-palette: 4;
 }
 
+body {
+  background-color: black;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+}
+
 .fade-enter {
   opacity: 0;
 }
@@ -24,10 +33,6 @@
 .fade-exit-active {
   opacity: 0;
   transition: opacity 100ms;
-}
-
-body {
-  background-color: black;
 }
 
 .contain {
@@ -61,7 +66,7 @@ body {
   perspective: 1000px;
   transform-style: preserve-3d;
   position: relative;
-  height: 400px;
+  height: 550px;
   width: 100%;
 }
 
@@ -70,7 +75,7 @@ body {
   flex-direction: column;
   transition: 0.3s ease;
   position: absolute;
-  width: 300px;
+  width: 420px;
   height: 100%;
   left: 0;
   right: 0;

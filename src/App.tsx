@@ -6,7 +6,7 @@ import { RiTailwindCssFill } from "react-icons/ri"
 import { RiNextjsFill } from "react-icons/ri"
 
 import { loadSlim } from "@tsparticles/slim"
-import { SiExpress, SiTypescript } from "react-icons/si"
+import { SiExpress, SiTypescript, SiDotnet } from "react-icons/si"
 import { DiDjango } from "react-icons/di"
 import { FaShop } from "react-icons/fa6"
 
@@ -115,8 +115,7 @@ const App = () => {
                   <div className="h-full flex flex-col justify-center gap-6">
                     <img src="/joseph.jpg" alt="Photo of Joseph" className="rounded-full max-w-24 mx-auto" />
                     <div>
-                      <p>Full-Stack Developer</p>
-                      <p>React/Typescript/Tailwind</p>
+                      <p>Software engineer with expertise in .NET, JavaScript, and modern frontend frameworks.</p>
                     </div>
                   </div>
                 </label>
@@ -124,15 +123,20 @@ const App = () => {
                 <label htmlFor="c2" className="card2 bg-[length:150%_150%] bg-gradient-to-br from-black via-slate-900 to-black animate-move_gradient border-2 border-blue-500 rounded-2xl">
                   <h1 className="text-3xl font-nabla">Bio</h1>
                   <div className="h-full flex flex-col justify-evenly">
-                    <p>I am a freelance full-stack website developer of 4+ years who is particularly experienced in React. Currently searching for full-time employment!</p>
+                    <p>I'm a software engineer with over 4 years of experience specializing in modern web development. My expertise lies in building high-performance applications using React and .NET technologies. Currently seeking new employment opportunities.</p>
                   </div>
                 </label>
 
                 <label htmlFor="c3" className="card3 bg-[length:150%_150%] bg-gradient-to-br from-black via-slate-900 to-black animate-move_gradient border-2 border-green-500 rounded-2xl">
                   <h1 className="text-3xl font-nabla">Main Stack</h1>
                   <div className="h-full flex flex-col justify-center gap-6">
-                    <p>These are the tools I use most often!</p>
+                    <p>These are the tools I use most often</p>
                     <ul className="grid grid-cols-2 w-3/4 mx-auto text-left gap-1">
+                      <li className="flex justify-center items-center">
+                        <SiDotnet size={30} color="#61DBFB" />
+                      </li>
+                      <li>.NET and C#</li>
+
                       <li className="flex justify-center items-center">
                         <FaReact size={30} color="#61DBFB" />
                       </li>
@@ -164,8 +168,13 @@ const App = () => {
                 <label htmlFor="c4" className="card4 bg-[length:150%_150%] bg-gradient-to-br from-black via-slate-900 to-black animate-move_gradient border-2 border-purple-500 rounded-2xl">
                   <h1 className="text-3xl font-nabla">Other Tools</h1>
                   <div className="h-full flex flex-col justify-center gap-4">
-                    <p>Here are some other tools I am experienced in!</p>
+                    <p>Here are some other tools I am experienced in</p>
                     <ul className="grid grid-cols-2 w-3/4 mx-auto text-left gap-0.5">
+                      <li className="flex justify-center items-center">
+                        <SiDotnet />
+                      </li>
+                      <li>ASP.NET</li>
+
                       <li className="flex justify-center items-center">
                         <SiTypescript />
                       </li>
@@ -196,12 +205,23 @@ const App = () => {
                       </li>
                       <li>Django</li>
                     </ul>
-                    <p>...and many more!</p>
                   </div>
                 </label>
 
                 <label htmlFor="c5" className="card5 bg-[length:150%_150%] bg-gradient-to-br from-black via-slate-900 to-black animate-move_gradient border-2 border-blue-500 rounded-2xl">
-                  <h1 className="text-3xl font-nabla">More Coming Soon!</h1>
+                  <h1 className="text-3xl font-nabla">Professional Training</h1>
+                  <div className="h-full flex flex-col justify-center gap-4 p-4">
+                    <h2 className="text-xl underline">
+                      <a href="https://prolog-app-js-enzie.vercel.app/">React Job Simulator</a>
+                    </h2>
+                    <p>Completed an intensive professional development program that simulated real-world work environment:</p>
+                    <ul className="text-left mx-auto list-disc">
+                      <li>Collaborated on a production-grade codebase using professional Git workflows</li>
+                      <li>Implemented pixel-perfect UI components from Figma designs</li>
+                      <li>Built features using industry-standard testing practices with Cypress</li>
+                      <li>Managed tasks through Kanban boards simulating agile development</li>
+                    </ul>
+                  </div>
                 </label>
 
                 <label htmlFor="c6" className="card6 bg-[length:150%_150%] bg-gradient-to-br from-black via-slate-900 to-black animate-move_gradient border-2 border-green-500 rounded-2xl">
@@ -214,7 +234,7 @@ const App = () => {
                           <p className="underline">Lupo</p>
                         </a>
 
-                        <p className="text-sm">This is a project I completed for a local restaurant, build using Next.js 13</p>
+                        <p className="text-sm">Website built for a local restaurant using Next.js 13. This uses Sanity.io as a CMS and static rendering for pages</p>
                       </div>
                     </div>
                     <div>
@@ -222,7 +242,7 @@ const App = () => {
                         <FaShop size={40} className="mx-auto" />
                         <p className="underline">Meows & Co</p>
                       </a>
-                      <p className="text-sm">This is an e-commerce demo, build using Next.js 13</p>
+                      <p className="text-sm">This is an e-commerce demo, built using Next.js 13 and the Shopify storefront API</p>
                     </div>
                   </div>
                 </label>
