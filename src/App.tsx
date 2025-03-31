@@ -95,7 +95,7 @@ const App = () => {
 
   if (init) {
     return (
-      <body>
+      <div>
         {isChecked && <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />}
 
         <div className="contain">
@@ -215,10 +215,9 @@ const App = () => {
                       <a href="https://prolog-app-js-enzie.vercel.app/">React Job Simulator</a>
                     </h2>
                     <p>Completed an intensive professional development program that simulated real-world work environment:</p>
-                    <ul className="text-left mx-auto list-disc">
+                    <ul className="text-left mx-auto list-disc text-sm/6">
                       <li>Collaborated on a production-grade codebase using professional Git workflows</li>
                       <li>Implemented pixel-perfect UI components from Figma designs</li>
-                      <li>Built features using industry-standard testing practices with Cypress</li>
                       <li>Managed tasks through Kanban boards simulating agile development</li>
                     </ul>
                   </div>
@@ -270,7 +269,7 @@ const App = () => {
             <label htmlFor="toggle" className="toggle"></label>
           </div>
         </div>
-      </body>
+      </div>
     )
   }
 
